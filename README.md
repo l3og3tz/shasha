@@ -1,4 +1,4 @@
-shasha
+shasha-1.0
 ======
 
-Shasha-1.0
+shasha-1.0
