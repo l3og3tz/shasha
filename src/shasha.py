@@ -91,7 +91,7 @@ def crack_simple_hash(the_user, the_crypted_password, the_dict_file):
         print "\033[1;30m[+] Attempting to crack...\033[1;m"
             
         for word in dictionary_file.readlines():  # running through words in dictionary one at a time.
-            word = word.strip("\n)")
+            word = word.strip("\n")
             the_crypt_word = crypt.crypt(word, the_salt)
 
             if(the_crypt_word == the_crypted_password):
@@ -130,7 +130,7 @@ def crack_sha_256(the_user, the_crypted_password, the_dict_file):
         print "\033[1;30m[+] Attempting to crack...\033[1;m"
     
         for word in dictionary_file.readlines():
-            word = word.strip("\n)")
+            word = word.strip("\n")
             the_crypt_word = crypt.crypt(word, the_insalt)
 
             if(the_crypt_word == the_crypted_password):
@@ -167,7 +167,7 @@ def crack_sha_512(the_user, the_crypted_password, the_dict_file):
         print "\033[1;30m[+] Attempting to crack...\033[1;m"
     
         for word in dictionary_file.readlines():
-            word = word.strip("\n)")
+            word = word.strip("\n")
             the_crypt_word = crypt.crypt(word, the_insalt)
 
             if(the_crypt_word == the_crypted_password):
@@ -204,7 +204,7 @@ def crack_md5(the_user, the_crypted_password, the_dict_file):
         print "\033[1;30m[+] Attempting to crack...\033[1;m"
     
         for word in dictionary_file.readlines():
-            word = word.strip("\n)")
+            word = word.strip("\n")
             the_crypt_word = crypt.crypt(word, the_insalt)
 
             if(the_crypt_word == the_crypted_password):
@@ -238,7 +238,7 @@ def crack_ntlm(the_user, the_crypted_password, the_dict_file):
         print "\033[1;30m[+] Attempting to crack...\033[1;m"
             
         for word in dictionary_file.readlines():
-            word = word.strip("\n)")
+            word = word.strip("\n")
             raw_crypt_word = hashlib.new("md4", word.encode("utf-16le")).digest()
             the_crypt_word = ntlm_prefix + binascii.hexlify(raw_crypt_word)
 
@@ -274,7 +274,7 @@ def crack_bcrypt(the_user, the_crypted_password, the_dict_file):
         print "\033[1;30m[+] Attempting to crack...\033[1;m"
 
         for word in dictionary_file.readlines():
-            word = word.strip("\n)")
+            word = word.strip("\n")
             hash = the_crypted_password
         
             if(hashpw(word, hash) == the_crypted_password): 
