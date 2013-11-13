@@ -2,7 +2,7 @@
 """
 Created on Aug 6, 2013
 
-@author: L3o G3tz (l30g3tz@gmail.com)
+@author: L3o G3tz (l3og3tz@gmail.com)
 """
 
 import crypt
